@@ -20,7 +20,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/infinix/X6837',
+    'device/infinix/X6886',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'hardware/transsion',
@@ -61,7 +61,7 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('ro.vendor.mtk_thermal_2_0', 'vendor.thermal.link_ready'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2'),
-    ('vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/libstfactory-vendor.so', 'vendor/lib64/libnvram.so', 'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
+    ('vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/nfc_nci.thn31nfc.tms.so', 'vendor/lib64/tms-utils.so', 'vendor/lib64/libstfactory-vendor.so', 'vendor/lib64/libnvram.so', 'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .patchelf_version('0_17_2')
@@ -104,12 +104,12 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libbinder.so', 'libbinder-v31.so')
         .replace_needed('libutils.so', 'libutils-v31.so')
         .add_needed('libcamera_metadata_shim.so'),
-    'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
-        .replace_needed('libhidlbase.so', 'libhidlbase-v31.so'),
+    ('vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so'): blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'X6837',
+    'X6886',
     'infinix',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

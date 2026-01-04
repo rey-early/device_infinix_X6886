@@ -20,10 +20,20 @@
 /sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/state                           u:object_r:sysfs_OTG_STATE_file:s0
 
 # Fingerprint
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service         u:object_r:hal_fingerprint_default_exec:s0
-/dev/fpsensor                                                                                   u:object_r:fpsensor_fp_device:s0
-/sys/kernel/tran_fp(/.*)?                                                                       u:object_r:sysfs_fp_name_path:s0
-/data/vendor/goodix/gf_data(/.*)?                                                               u:object_r:vendor_gf_data_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-mediatek    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.transsion  u:object_r:hal_fingerprint_default_exec:s0
+/sys/kernel/tran_fp(/.*)?                                                                          u:object_r:sysfs_fp_name_path:s0
+/data/vendor/goodix/gf_data(/.*)?                                                                  u:object_r:vendor_gf_data_file:s0
+/dev/jiiov_fp                                                                                      u:object_r:jiiov_fp_device:s0
+/data/vendor/fingerprint(/.*)?                                                                     u:object_r:jiiov_vendor_data_file:s0
+
+# Fingerprint (Silead)
+/(vendor|system/vendor)/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service            u:object_r:hal_fingerprint_default_exec:s0
+/dev/spidev.*                                                                                   u:object_r:silead_fpd_device:s0
+/dev/silead_fp                                                                                  u:object_r:silead_fpd_device:s0
+/dev/silead_stub                                                                                u:object_r:silead_fpd_device:s0
+/persist/silead(/.*)?                                                                           u:object_r:silead_fpd_data_file:s0
+/data/(vendor|system)/silead(/.*)?                                                              u:object_r:silead_fpd_data_file:s0
 
 # Health
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.health@2\.1-service         u:object_r:hal_health_default_exec:s0
@@ -35,9 +45,12 @@
 /sys/devices/platform/soc/11240000.mmc/mmc_host/mmc0/mmc0:[a-f0-9]+/type               u:object_r:vendor_sysfs_mmc_device_type:s0
 
 # NFC
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service-tms u:object_r:hal_nfc_default_exec:s0
 /dev/pn54x                                                                                  u:object_r:nfc_device:s0
 /dev/pn553                                                                                  u:object_r:nfc_device:s0
 /dev/nxpnfc                                                                                 u:object_r:nfc_device:s0
+/dev/tms_nfc                                                                                           u:object_r:nfc_device:s0
+/dev/tms_ese                                                                                u:object_r:nfc_device:s0
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                      u:object_r:hal_power_default_exec:s0

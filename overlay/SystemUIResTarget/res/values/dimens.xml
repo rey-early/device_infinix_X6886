@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Location on the screen of the center of the physical power button. -->
-    <dimen name="physical_power_button_center_screen_location_y">1040px</dimen>
+    <!-- Color of the FOD view -->
+    <color name="config_udfpsColor">#ffffffff</color>
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
-    <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1040px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">2168px</dimen>
+
+    <!-- Location on the screen of the center of the physical power button. This is a reasonable
+        default that should be overridden by device-specific overlays. -->
+    <dimen name="physical_power_button_center_screen_location_y">1200px</dimen>
+
+    <!-- Pixel pitch of the device. um/px -->
+    <item name="pixel_pitch" format="float" type="dimen">64.37</item>
 
     <!-- Adjust the icon padding in status bar for rounded corners. -->
     <dimen name="rounded_corner_content_padding">47.0px</dimen>

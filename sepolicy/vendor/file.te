@@ -12,9 +12,15 @@ type vendor_megvii_data_file, file_type, data_file_type, mlstrustedobject;
 # Data
 type storage_dbg_data_file, file_type, core_data_file_type, data_file_type;
 
+# Display
+type sysfs_lcm_name_file, fs_type, sysfs_type;
+
 # Fingerprint
+type jiiov_vendor_data_file, file_type, data_file_type;
+type silead_fpd_data_file, data_file_type, file_type;
 type sysfs_fp_name_path, fs_type, sysfs_type;
 type vendor_gf_data_file, file_type, data_file_type;
+type vendor_proc_fingerprint, fs_type, proc_type, sysfs_type;
 
 # MMC
 type vendor_sysfs_mmc_device_type, fs_type, sysfs_type;

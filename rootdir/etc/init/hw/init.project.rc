@@ -1,6 +1,6 @@
-import /vendor/etc/init/hw/init.mtkgki.rc
 
-# MTK project .rc configure
+on early-init
+   enable vendor.nfc_hal_service
 
 on init
     # Set gesture touch permissions
@@ -9,6 +9,9 @@ on init
 
     # OTG
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
+
+on post-fs
+   start nfc_hal_service.tms
 
 on post-fs-data
     chmod 0660 /dev/MAINAF
@@ -82,6 +85,19 @@ on boot
     # Change owner for GED KPI
     chown system system /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled
     chmod 0644 /sys/module/sspm_v3/holders/ged/parameters/is_GED_KPI_enabled
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+    class hal
+    user nfc
+    group nfc
+    disabled
+    override
+
+service nfc_hal_service.tms /vendor/bin/hw/android.hardware.nfc-service-tms
+    class hal
+    user nfc
+    group nfc
+    disabled
 
 on property:sys.boot_completed=1
     # Disable GED KPI

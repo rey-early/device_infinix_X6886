@@ -74,6 +74,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.nfc.X6886.rc",
+    src: "etc/init/hw/init.nfc.X6886.rc",
+    sub_dir: "init/hw",
+    vendor: true
+}
+
+prebuilt_etc {
     name: "init.project.rc",
     src: "etc/init/hw/init.project.rc",
     sub_dir: "init/hw",
