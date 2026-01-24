@@ -442,6 +442,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/transsion
@@ -477,7 +478,7 @@ PRODUCT_PACKAGES += \
     libprocessgroup_shim \
     libcamera_metadata_shim \
     libstagefright_foundation-v33 \
-    libtinyxml-v34 \
+    libtinyxml2-v34 \
     libutils-v32 \
     libhidlbase-v32 \
     libbinder-v32
