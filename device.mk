@@ -499,12 +499,15 @@ PRODUCT_PACKAGES += \
     vndservice
     
 # Wi-Fi
+$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
+
 PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper \
     android.hardware.wifi-service \
     wpa_supplicant \
-    lib_driver_cmd_mt66xx \
     hostapd
+    
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6886/X6886-vendor.mk)
