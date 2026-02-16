@@ -1875,7 +1875,6 @@ vendor/lib/libvcodec_utility_plat.mt6789.so
 vendor/lib64/libvpu.so
 
 # Media (C2)
-vendor/etc/mtk_platform_codecs_config.xml
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
