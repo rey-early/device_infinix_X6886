@@ -500,9 +500,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     wpa_supplicant \
     hostapd
-    
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6886/X6886-vendor.mk)
