@@ -1667,6 +1667,13 @@ vendor/etc/nt37706a_fhdp_dsi_vdo_dsc_boe_boe_144hz_x6886_cust_color.xml
 vendor/etc/vtdr6126a_fhdp_dsi_vdo_dsc_tm_tm_144hz_x6886_cust_color.xml
 vendor/etc/VideoLog_dynamic.xml
 
+# Display Configs - from X6871
+vendor/etc/gralloc/cam.xml
+vendor/etc/gralloc/dpu.xml
+vendor/etc/gralloc/dpu_aeu.xml
+vendor/etc/gralloc/gpu.xml
+vendor/etc/gralloc/vpu.xml
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
@@ -1948,6 +1955,9 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
 # NFC
+system_ext/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so:vendor/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so
+vendor/bin/hw/android.hardware.nfc@1.2-service-tms
+vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
 vendor/etc/init/init.hal_mgvi_64_nfc_armv82.nfc.rc
 vendor/etc/init/init.hal_mgvi_64_nfc_armv82.se.rc
 vendor/etc/init/init.nxp.nfc.rc
@@ -1960,19 +1970,19 @@ vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
 vendor/etc/SEC_THN31_FW_VTP.txt.bin
+vendor/etc/permissions/com.nxp.ls.xml
+vendor/etc/permissions/com.nxp.mifare.xml
+vendor/etc/permissions/com.nxp.nfc.xml
+-vendor/etc/vintf/manifest/vendor.tms.hardware.nfc.xml
+vendor/lib64/7816-3-T1.so
 vendor/lib64/libpn557_fw.so
+vendor/lib64/nfc_nci.thn31nfc.tms.so
 vendor/lib64/nfc_nci_nxp_snxxx.so
+vendor/lib64/tms-cos-dl-common.so
+vendor/lib64/tms-cos-dl-ree.so
+vendor/lib64/tms-utils.so
+vendor/lib64/vendor.tms.tmsnfc@1.0.so
 vendor/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
-
-# NFC - from zircon OS2.0.207.0.VNOMIXM
-odm/bin/hw/android.hardware.nfc@1.2-service-tms|1e7ed2a77b4cd5626bfa239f158545405fc170bd
-odm/lib64/7816-3-T1.so|535371d4a17aa0ee58260abb6e673ba39e865d8b
-odm/lib64/nfc_nci.thn31nfc.tms.so|2db44be76e45565131e744a5192940c0a4429911|d84f5a3f26d7a83c2190a331db24347d23934f61
-odm/lib64/tms-cos-dl-common.so|deccaadff7941b4b585ca588923e9ed19cde6b63
-odm/lib64/tms-cos-dl-ree.so|e25df5092c44101d1a4482115cb794a0884a0594
-odm/lib64/tms-utils.so|86b3083ddc8500b6628b4c43fee2ddea6b1359e3|43f7ce9013b6c6077692be56211a7875f959c037
-vendor/lib64/vendor.tms.nfc-V1-ndk.so|f1f2e67f8cb605bf06af2d1c48c76492237b6d1f
-vendor/lib64/vendor.tms.tmsnfc@1.0.so|4310ea6e30c38c33d222bf23cacaef41cdd2d864
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk

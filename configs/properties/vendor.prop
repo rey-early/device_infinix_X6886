@@ -58,8 +58,11 @@ ro.vendor.camkit_enabled=1
 ro.vendor.mtk_cam_security_support=0
 ro.vendor.mtk_camera_app_version=3
 ro.vendor.mtk_slow_motion_support=1
+vendor.camera.extimgproc.syncthread=1
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
+vendor.camera.vsdof.optimize=true
+vendor.debug.trancam.vipscheduler=1
 vendor.debug.tran_cam_dynamic_fps=0
 vendor.mtk.camera.app.fd.video=1
 
@@ -81,6 +84,28 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # DRM
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
+
+# Display (EGL)
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.hal_format=0x2b
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.hal_format=0x16
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
 
 # Enable virtual A/B compression
 ro.virtual_ab.compression.threads=true
