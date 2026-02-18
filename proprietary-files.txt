@@ -1423,6 +1423,7 @@ vendor/lib64/libanc_hdr_check.so
 vendor/lib64/libanc_single_bokeh.so
 vendor/lib64/libanc_single_bokeh_rear.so
 vendor/lib64/libanc_single_rt_bokeh.so
+vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libdre.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libimagebuffer_wrapper.so
@@ -1438,15 +1439,15 @@ vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/libTranCmd.so
 vendor/lib64/libTranColorEffectEngine.so
 vendor/lib64/libtrancrypto.so
-vendor/lib64/libtranDatacenter.so
 vendor/lib64/libTranExtImgThread.so
 vendor/lib64/libTranfacFunction.so
 vendor/lib64/libTranfacOverlay.so
 vendor/lib64/libTranfacUtils.so
 vendor/lib64/libTranHdrChecker.so
 vendor/lib64/libTransSched.so
-vendor/lib64/libtranssion_forkexecwrap.so
 vendor/lib64/libVkLayer_mtk_rt_sdk.so
+vendor/lib64/libvpnr.so
+vendor/lib64/libvpnr_enroll.so
 vendor/lib64/vendor.transsion.performance.sched@1.0.so
 vendor/lib64/mt6789/fake_serial_yuv_IdxMgr.so;SYMLINK=vendor/lib64/fake_serial_yuv_IdxMgr.so
 vendor/lib64/mt6789/fake_serial_yuv_tuning.so;SYMLINK=vendor/lib64/fake_serial_yuv_tuning.so
@@ -1523,7 +1524,7 @@ vendor/lib64/mt6789/libmpbase.so;SYMLINK=vendor/lib64/libmpbase.so
 vendor/lib64/mt6789/libmsnr.so;SYMLINK=vendor/lib64/libmsnr.so
 vendor/lib64/mt6789/libPortraitEnhance_64.so;SYMLINK=vendor/lib64/libPortraitEnhance_64.so
 vendor/lib64/mt6789/libportrait_repair_ppl3_ocl.so;SYMLINK=vendor/lib64/libportrait_repair_ppl3_ocl.so
-vendor/lib64/mt6789/libsegmention.so;SYMLINK=vendor/lib64/libsegmention.so
+vendor/lib64/mt6789/libsegmention.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libsegmention.so
 vendor/lib64/mt6789/libsegmentionPre.so;SYMLINK=vendor/lib64/libsegmentionPre.so
 vendor/lib64/mt6789/libsmartdetector.so;SYMLINK=vendor/lib64/libsmartdetector.so
 vendor/lib64/mt6789/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
@@ -1587,6 +1588,9 @@ vendor/raw_hdr/params_bin/lite_imx882_17201983_EXPO_BRACKET_HDR_nr.bin
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/init.wmt_drv.rc
+
+# Consumerir
+vendor/lib64/hw/consumerir.common.so
 
 # Display
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
@@ -1963,10 +1967,10 @@ vendor/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
 # NFC - from zircon OS2.0.207.0.VNOMIXM
 odm/bin/hw/android.hardware.nfc@1.2-service-tms|1e7ed2a77b4cd5626bfa239f158545405fc170bd
 odm/lib64/7816-3-T1.so|535371d4a17aa0ee58260abb6e673ba39e865d8b
-odm/lib64/nfc_nci.thn31nfc.tms.so|2db44be76e45565131e744a5192940c0a4429911
+odm/lib64/nfc_nci.thn31nfc.tms.so|2db44be76e45565131e744a5192940c0a4429911|d84f5a3f26d7a83c2190a331db24347d23934f61
 odm/lib64/tms-cos-dl-common.so|deccaadff7941b4b585ca588923e9ed19cde6b63
 odm/lib64/tms-cos-dl-ree.so|e25df5092c44101d1a4482115cb794a0884a0594
-odm/lib64/tms-utils.so|86b3083ddc8500b6628b4c43fee2ddea6b1359e3
+odm/lib64/tms-utils.so|86b3083ddc8500b6628b4c43fee2ddea6b1359e3|43f7ce9013b6c6077692be56211a7875f959c037
 vendor/lib64/vendor.tms.nfc-V1-ndk.so|f1f2e67f8cb605bf06af2d1c48c76492237b6d1f
 vendor/lib64/vendor.tms.tmsnfc@1.0.so|4310ea6e30c38c33d222bf23cacaef41cdd2d864
 
