@@ -120,22 +120,38 @@ persist.sys.fuse.passthrough.enable=true
 ro.hardware.gatekeeper=trustonic
 
 # Graphics
-debug.cpurend.vsync=false
-debug.mediatek.disp_decompress=1
+debug.renderengine.backend=skiaglthreaded
 debug.graphics.game_default_frame_rate.disabled=true
 debug.mediatek.appgamepq_compress=1
 graphics.gpu.profiler.support=true
-ro.hardware.egl=meow
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.hal_format=0x2b
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.hal_format=0x16
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
+ro.hardware.egl=mali
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
 ro.opengles.version=196610
-ro.vendor.build.dont_use_vabc=true
-ro.vendor.mtk_aod_support=1
-ro.vendor.mtk_svp_on_mtee_support=2
+ro.vendor.smvr.p2batch.vga=8
 ro.vendor.smvr.p2batch.hd=4
-ro.vendor.smvr.p2batch.vga=8    
-service.sf.prime_shader_cache=0
+ro.vendor.mtk_blulight_def_support=1
 persist.vendor.sys.mtkaal.function=0
 
 # GPS
@@ -305,31 +321,34 @@ ro.vendor.init.sensor.rc=init.sensor_2_0.rc
 ro.vendor.mtk.sensor.support=yes
 
 # Surfaceflinger
-debug.sf.auto_latch_unsignaled=0
-debug.sf.disable_client_composition_cache=1
-debug.sf.enable_gl_backpressure=1
+debug.sf.disable_client_composition_cache=0
+debug.sf.disable_backpressure=0
+debug.sf.early.app.duration=14600000
+debug.sf.earlyGl.app.duration=14600000
+debug.sf.earlyGl.sf.duration=13100000
+debug.sf.early.sf.duration=13100000
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.treat_170m_as_sRGB=1
+debug.sf.frame_rate_multiple_threshold=120
+debug.sf.hwc.min.duration=2000000
+debug.sf.late.app.duration=14600000
+debug.sf.late.sf.duration=13100000
+debug.sf.set_binder_thread_rt=1
 debug.sf.use_phase_offsets_as_durations=1
-debug.sf.late.sf.duration=16500000
-debug.sf.late.app.duration=16500000
-debug.sf.early.sf.duration=15000000
-debug.sf.early.app.duration=15000000
-debug.sf.earlyGl.sf.duration=16250000
-debug.sf.earlyGl.app.duration=16250000
-debug.sf.hwc.min.duration=18000000
+ro.surface_flinger.clear_slots_with_set_layer_buffer=false
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.ignore_hdr_camera_layers=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.set_idle_timer_ms=4000
-ro.surface_flinger.set_touch_timer_ms=4000
-ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_idle_timer_ms=1100   
+ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.uclamp.min=328
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+debug.sf.enable_egl_image_tracker=0
 
 # SoC
 ro.soc.manufacturer=Mediatek
@@ -352,6 +371,11 @@ ro.vendor.wlan.standalone.log=y
 
 # WiFi Display
 ro.vendor.mtk_wfd_support=1
+
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
 
 # Zygote
 zygote.critical_window.minute=10

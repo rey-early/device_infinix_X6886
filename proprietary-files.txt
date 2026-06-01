@@ -1667,13 +1667,6 @@ vendor/etc/nt37706a_fhdp_dsi_vdo_dsc_boe_boe_144hz_x6886_cust_color.xml
 vendor/etc/vtdr6126a_fhdp_dsi_vdo_dsc_tm_tm_144hz_x6886_cust_color.xml
 vendor/etc/VideoLog_dynamic.xml
 
-# Display Configs - from X6871
-vendor/etc/gralloc/cam.xml
-vendor/etc/gralloc/dpu.xml
-vendor/etc/gralloc/dpu_aeu.xml
-vendor/etc/gralloc/gpu.xml
-vendor/etc/gralloc/vpu.xml
-
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
@@ -1694,11 +1687,6 @@ vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.mediatek.hardware.biometrics.fingerprint@2.1.so
-
-# Fingerprint (FOD Trigger)
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.transsion|6abfd70ff35a187f0b450184276e472a9019292c
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.3-service.transsion.xml|75cbb1f959fb56709ff757549d89e495588744e1
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.3-service.transsion.rc|21b317910a10eff349fed6262c753a0be65dfbcc
  
 # Firmware
 vendor/firmware/aw20144_all_rgb_off.bin
@@ -1955,13 +1943,13 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
 # NFC
-system_ext/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so:vendor/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so
 vendor/bin/hw/android.hardware.nfc@1.2-service-tms
+vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
 vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
+vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
 vendor/etc/init/init.hal_mgvi_64_nfc_armv82.nfc.rc
 vendor/etc/init/init.hal_mgvi_64_nfc_armv82.se.rc
 vendor/etc/init/init.nxp.nfc.rc
-vendor/etc/libese-tms.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-slm.conf
@@ -1969,20 +1957,24 @@ vendor/etc/libnfc-tms.conf
 vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
-vendor/etc/SEC_THN31_FW_VTP.txt.bin
+vendor/etc/permissions/android.hardware.nfc.hce.xml
+vendor/etc/permissions/android.hardware.nfc.xml
+vendor/etc/permissions/com.android.nfc_extras.xml
 vendor/etc/permissions/com.nxp.ls.xml
 vendor/etc/permissions/com.nxp.mifare.xml
 vendor/etc/permissions/com.nxp.nfc.xml
--vendor/etc/vintf/manifest/vendor.tms.hardware.nfc.xml
-vendor/lib64/7816-3-T1.so
-vendor/lib64/libpn557_fw.so
-vendor/lib64/nfc_nci.thn31nfc.tms.so
+vendor/etc/vintf/manifest/vendor.tms.hardware.nfc.xml
+vendor/lib64/android.hardware.nfc@1.0.so
+vendor/lib64/android.hardware.nfc@1.1.so
+vendor/lib64/android.hardware.nfc@1.2.so
 vendor/lib64/nfc_nci_nxp_snxxx.so
-vendor/lib64/tms-cos-dl-common.so
-vendor/lib64/tms-cos-dl-ree.so
-vendor/lib64/tms-utils.so
+vendor/lib64/nfc_nci.thn31nfc.tms.so
+vendor/lib64/vendor.nxp.nxpese@1.0.so
+vendor/lib64/vendor.nxp.nxpnfc@2.0.so
 vendor/lib64/vendor.tms.tmsnfc@1.0.so
-vendor/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
+vendor/lib/android.hardware.nfc@1.0.so
+vendor/libnfc-nxp_RF.conf
+vendor/lib/vendor.tms.tmsnfc@1.0.so
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
